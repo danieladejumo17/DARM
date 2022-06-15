@@ -1,0 +1,32 @@
+function out = compute_knm_lengths(knm, viz)
+    % Compute length of Digit 1 Links
+    d1 = knm.d1;
+    d_phalanx = d1.distal_phalanx;
+    DP_length = norm(d_phalanx.head_transform(1,:) - d_phalanx.ip_joint_transform(1,:));
+    
+    p_phalanx = d1.proximal_phalanx;
+    PP_length = norm(p_phalanx.ip_joint_transform(1,:) - p_phalanx.mcp_joint_transform(1,:));
+    
+    metacarpal = d1.metacarpal;
+    % Add Z=knm.carpals.cm_i_joint_centre_block_dim(3) from cm_joint_transform
+    Z_offset = [0 0 knm.carpals.cm_i_joint_centre_block_dim(3)];
+    MC_lenght = norm(metacarpal.mcp_joint_transform(1,:) - ...
+        (metacarpal.cm_joint_transform(1,:) + Z_offset));
+    
+    d1_viz = viz.d1;
+    ip_radius = d1_viz.ip_joint.radius;
+    ip_length = d1_viz.ip_joint.length;
+    mcp_radius = d1_viz.mcp_joint.radius;
+    mcp_length = d1_viz.mcp_joint.length;
+    
+    % Fill Digit 1 Output
+    digit1 = struct("DP_1_length", DP_length, ...
+        "PP_1_length", PP_length, ...
+        "MC_1_lenght", MC_lenght, ...
+        "IP_Joint_Viz_Radius", ip_radius, "IP_Joint_Viz_Lenght", ip_length, ...
+        "MCP_Joint_Viz_Radius", mcp_radius, "MCP_Joint_Viz_Lenght", mcp_length);
+    
+    
+    % Fill Output
+    out = struct("Digit_1", digit1);
+end
