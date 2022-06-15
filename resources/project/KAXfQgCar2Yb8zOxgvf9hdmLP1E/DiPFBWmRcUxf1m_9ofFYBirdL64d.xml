@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Info Type="StartUp" Visible="0" Icon="" File="Simulink Models/init.mlx" Name="init">
+    <Extension Value="dec58917-f8de-48e8-843b-fb068766e319" Name="StartUpPrev" />
+</Info>
