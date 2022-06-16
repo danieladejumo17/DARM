@@ -35,19 +35,15 @@ function out = compute_knm_lengths(knm, viz)
     % --------------------------------------------
     % Fill Digit 2 - 5 Outputs
     % --------------------------------------------
-    digit2 = compute_digit_knm_lengths(knm.d2, viz.d2, 2);
-    digit3 = compute_digit_knm_lengths(knm.d3, viz.d3, 3);
-    digit4 = compute_digit_knm_lengths(knm.d4, viz.d4, 4);
-    digit5 = compute_digit_knm_lengths(knm.d5, viz.d5, 5);
+    digit2 = compute_digit_knm_lengths(knm.d2, viz.d2, 2)
+    digit3 = compute_digit_knm_lengths(knm.d3, viz.d3, 3)
+    digit4 = compute_digit_knm_lengths(knm.d4, viz.d4, 4)
+    digit5 = compute_digit_knm_lengths(knm.d5, viz.d5, 5)
     
     
     
     % --------------------------------------------
     % Fill Output
     % --------------------------------------------
-    out = struct("Digit_1", digit1, ...
-        "Digit_2", digit2, ...
-        "Digit_3", digit3, ...
-        "Digit_4", digit4, ...
-        "Digit_5", digit5);
+    out = struct("Digit_1", digit1, ...);
 end
