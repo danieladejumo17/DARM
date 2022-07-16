@@ -16,6 +16,7 @@ function digit = compute_digit_knm_lengths(d_knm, d_viz, index)
       MC_length = norm(metacarpal.mcp_joint_transform(1,:) - (metacarpal.cm_joint_transform(1,:)));
       
       % Ligament Length
+      % TODO: Subtract Saddle Joint Z-Offset
       MC_head_ligament_length = d_knm.metacarpal_head_ligament.length;
     else
         MC_length = 0;
