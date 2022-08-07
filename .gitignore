@@ -1,3 +1,4 @@
 # List of untracked files to ignore
 *.slxc
+*.autosave
 /Geometry Models and FEA/Models/Skeleton Scan/dicom_complete_skeleton.stl
