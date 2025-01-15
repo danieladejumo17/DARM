@@ -4,7 +4,7 @@
 <img src="https://github.com/user-attachments/assets/3d3a1d1d-c8b8-4d63-b3f0-f19601d2d8bf" width="603" height="675">
 
 ## DARM Hand CAD Model
-[View full model](https://a360.co/4jmfVWr "DARM Hand Assembly in Fusion 360")
+[View full model in browser](https://a360.co/4jmfVWr "DARM Hand Assembly in Fusion 360")
 
 ![DARM_Hand](https://github.com/user-attachments/assets/075b467a-9fd0-4d1c-a640-7135533f1f32)
 
